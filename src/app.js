@@ -1,4 +1,4 @@
-import styled, {createGlobalStyle} from "styled-components";
+import {createGlobalStyle} from "styled-components";
 
 export const GlobalStyle = createGlobalStyle`
     * {
@@ -22,7 +22,4 @@ export const GlobalStyle = createGlobalStyle`
     body{
         background: #fff;
     }
-`;
-export const Main = styled.main`
-    margin-top: 70px;
 `;
