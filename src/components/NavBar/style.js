@@ -3,7 +3,6 @@ import styled, {css} from "styled-components";
 export const Header = styled.header`
     width: 100%;
     height: 70px;
-    padding: 20px;
 
     padding: 10px 50px;
     justify-content: space-between;
@@ -23,6 +22,9 @@ export const Header = styled.header`
             height: ${({isOpen}) => (isOpen ? "100vh" : "70px")};
             transition: height 0.3s;
             flex-direction: column;
+            align-items: start;
+
+            padding: 10px 15px;
         }
         & div {
             display: block;
