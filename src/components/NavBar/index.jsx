@@ -1,6 +1,7 @@
 import {Link} from "react-router-dom";
-import {ContentList, Header, IconList, List} from "./style";
+import {ContentList, Header, IconList, Line, List, Logo} from "./style";
 import {useState} from "react";
+import logoImage from "../../images/logoPlus.png";
 
 export default function NavBar() {
 	const [isOpen, setIsOpen] = useState(false);
@@ -11,18 +12,23 @@ export default function NavBar() {
 
 	return (
 		<Header isOpen={isOpen}>
-			<IconList onClick={handleToggle} />
+			<Logo src={logoImage} />
 			<List>
 				<ContentList>
-					<Link to="/">Início</Link>
+					<Link onClick={handleToggle} to="/">Início</Link>
 				</ContentList>
 				<ContentList>
-					<Link to="/Sobre-Nos">Sobre nós</Link>
+					<Link onClick={handleToggle} to="/Sobre-Nos">Sobre</Link>
 				</ContentList>
 				<ContentList>
-					<Link to="/Download">Download</Link>
+					<Link onClick={handleToggle} to="/Download">Download</Link>
 				</ContentList>
 			</List>
+			<IconList onClick={handleToggle} isOpen={isOpen}>
+				<Line></Line>
+				<Line></Line>
+				<Line></Line>
+			</IconList>
 		</Header>
 	);
 }
