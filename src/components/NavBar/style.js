@@ -1,8 +1,9 @@
 import styled, {css} from "styled-components";
 
-const hover = "#1171FF";
+export const hover = "#1171FF";
 
 export const Header = styled.header`
+    z-index: 50;
     width: 100%;
     height: 70px;
 
