@@ -18,7 +18,6 @@ export const GlobalStyle = createGlobalStyle`
         outline: none;
         border: none;
 
-
         font-family: 'Sofia Sans', sans-serif;
         font-size: 20px;
         /* color: #dcdedf; */

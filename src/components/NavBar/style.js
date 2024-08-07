@@ -8,7 +8,7 @@ export const Header = styled.header`
 
     padding: 10px 50px;
 
-    position: absolute;
+    position: fixed;
     top: 0;
 
     display: flex;
@@ -19,7 +19,7 @@ export const Header = styled.header`
 
     overflow: hidden;
 
-    box-shadow: #B0B7BA88 0px 0px 5px 5px;
+    box-shadow: #B0B7BA88 0px 0px 10px 5px;
 
     @media only screen and (max-width: 510px){
         & img {
