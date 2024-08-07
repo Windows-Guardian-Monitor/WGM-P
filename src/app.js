@@ -18,9 +18,8 @@ export const GlobalStyle = createGlobalStyle`
         outline: none;
         border: none;
 
-        font-family: "PetrovSans-Trial", sans-serif;
-        font-weight: normal;
-        font-style: normal;
+
+        font-family: 'Sofia Sans', sans-serif;
         font-size: 20px;
         /* color: #dcdedf; */
         color: #012;
