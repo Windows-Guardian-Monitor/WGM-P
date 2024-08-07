@@ -1,23 +1,58 @@
 import styled, {css} from "styled-components";
 
+const hover = "#1171FF";
+
 export const Header = styled.header`
     width: 100%;
     height: 70px;
 
     padding: 10px 50px;
-    justify-content: space-between;
 
     position: absolute;
     top: 0;
 
     display: flex;
     align-items: center;
+    justify-content: center;
 
-    background: linear-gradient(to right, #194FA6, #2473F2);
+    background: white;
 
     overflow: hidden;
 
+    box-shadow: #B0B7BA88 0px 0px 5px 5px;
+
+    @media only screen and (max-width: 510px){
+        & img {
+            height: 30px;
+        }
+    }
+
     @media only screen and (max-width: 1020px){
+        & img {
+            ${props =>
+					props.isOpen
+						? css`
+                            opacity: 0;
+                        `
+						: css`
+                            animation: logo 0.7s;
+                        `}
+            transition: opacity 0.2s;
+
+
+            @keyframes logo {
+                0% {
+                    opacity: 0;
+                }
+                50%{
+                    opacity: 0;
+                }
+                100%{
+                    opacity: 100;
+                }
+            }
+        }
+
         & {
             height: ${({isOpen}) => (isOpen ? "100vh" : "70px")};
             transition: height 0.3s;
@@ -49,6 +84,7 @@ export const Header = styled.header`
         & div {
             display: none;
         }
+        justify-content: space-between;
     }
 
 `;
@@ -64,6 +100,10 @@ export const IconList = styled.div`
     appearance: none;
 	-webkit-appearance: none;
 	-moz-appearance: none;
+
+    &:hover span{
+        background: ${hover};
+    }
 
     & span:nth-child(1) {
         content: '';
@@ -107,7 +147,7 @@ position: absolute;
         content: '';
         width: 100%;
         height: 2px;
-        background-color: #111;
+        background-color: #000;
 `;
 export const List = styled.ul`
     display: flex;
@@ -115,17 +155,20 @@ export const List = styled.ul`
 `;
 export const Logo = styled.img`
     height: 50px;
+    user-select: none;
 `;
 export const ContentList = styled.li`
+    user-select: none;
+
     position: relative;
 
     & * {
         cursor: pointer;
-        padding: 25px 15px;
+        padding: 25px;
     }
 
     & *:hover {
-        color: white;
+        color: ${hover};
         transition: color 0.2s;
     }
     & *::after{
@@ -134,18 +177,17 @@ export const ContentList = styled.li`
         left: 50%;
 
         width: 0%;
-        height: 1px;
+        height: 3px;
         
+        border-radius: 0 0 3px 3px;
         
         position: absolute;
         transition: transform 0.2s, width 0.2s, left 0.2s;
 
-        background: white;
+        background: ${hover};
     }
     & *:hover::after{
         width: 100%;
         left: 0%;
-
-
     }
 `;

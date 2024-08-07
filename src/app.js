@@ -1,6 +1,12 @@
 import {createGlobalStyle} from "styled-components";
 
 export const GlobalStyle = createGlobalStyle`
+    @font-face {
+        font-family: "PetrovSans-Trial";
+        src: url("./src/fonts/PetrovSans-Trial-Regular.ttf") format("truetype"),
+        url("./src/fonts/PetrovSans-Trial-Regular.woff") format("woff"),
+        url("./src/fonts/PetrovSans-Trial-Regular.woff2") format("woff2");
+    }
     * {
         margin: 0;
         padding: 0;
@@ -12,9 +18,12 @@ export const GlobalStyle = createGlobalStyle`
         outline: none;
         border: none;
 
-        font-family: Arial, Helvetica, sans-serif;
+        font-family: "PetrovSans-Trial", sans-serif;
+        font-weight: normal;
+        font-style: normal;
         font-size: 20px;
-        color: #111;
+        /* color: #dcdedf; */
+        color: #012;
 
         scroll-behavior: smooth;
 
