@@ -12,9 +12,10 @@ export const GlobalStyle = createGlobalStyle`
         outline: none;
         border: none;
 
-        font-family: Arial, Helvetica, sans-serif;
+        font-family: 'Sofia Sans', sans-serif;
         font-size: 20px;
-        color: #111;
+        /* color: #dcdedf; */
+        color: #012;
 
         scroll-behavior: smooth;
 
