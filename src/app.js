@@ -20,8 +20,7 @@ export const GlobalStyle = createGlobalStyle`
 
         font-family: 'Sofia Sans', sans-serif;
         font-size: 20px;
-        /* color: #dcdedf; */
-        color: #012;
+        color: initial;
 
         scroll-behavior: smooth;
 

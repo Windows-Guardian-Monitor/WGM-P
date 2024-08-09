@@ -5,5 +5,5 @@ export const Main = styled.main`
 
     height: 100%;
     
-    background: #f1f2f3;
+    background: #fafbfc;
 `;
