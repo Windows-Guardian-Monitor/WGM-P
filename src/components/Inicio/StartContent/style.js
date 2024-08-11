@@ -5,12 +5,14 @@ export const ContainerWrite = styled.section`
     position: relative;
     z-index: 0;
 
+    height: 100%;
+
     display: grid;
     grid-template-columns: repeat(3, 1fr);
 
     gap: 100px;
 
-    padding: 50px 15%;
+    padding: 100px 15%;
     a {
         display: flex;
         justify-content: center;
@@ -59,7 +61,9 @@ export const DownloadButtom = styled.div`
         color: ${hover};
     
         border: 2px solid ${hover};
-        border-radius: 5px;
+        border-radius: 10px;
+
+        overflow: hidden;
     
         height: 100%;
         width: 100%;
@@ -91,7 +95,7 @@ export const DownloadButtom = styled.div`
             color: #fff;
             animation: baixeAgora 1s infinite;
             animation-delay: 0.7s;
-            height: calc(100% - 7px);
+            height: calc(100% - 5px);
             transition: height 0.3s;
         }
     }
