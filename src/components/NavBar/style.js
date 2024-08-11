@@ -2,6 +2,20 @@ import styled, {css} from "styled-components";
 
 export const hover = "#1171FF";
 
+export const HeaderAnimation = styled.div`
+    @media only screen and (max-width: 1020px){
+        
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: 49;
+        width: 100%;
+        height: ${({isOpen}) => (isOpen ? "100vh" : "65px")};
+        background: ${hover};
+        transition: height ${({isOpen}) => (isOpen ? "0.3s" : "0.65s")};
+    }
+`;
+
 export const Header = styled.header`
     z-index: 50;
     width: 100%;
@@ -16,7 +30,7 @@ export const Header = styled.header`
     align-items: center;
     justify-content: center;
 
-    background: white;
+    background: #fff;
 
     overflow: hidden;
 
@@ -36,10 +50,9 @@ export const Header = styled.header`
                             opacity: 0;
                         `
 						: css`
-                            animation: logo 0.7s;
+                            animation: logo 1s;
                         `}
             transition: opacity 0.2s;
-
 
             @keyframes logo {
                 0% {
@@ -56,11 +69,12 @@ export const Header = styled.header`
 
         & {
             height: ${({isOpen}) => (isOpen ? "100vh" : "70px")};
-            transition: height 0.3s;
+            transition: height 0.5s;
             flex-direction: column;
             align-items: start;
 
             padding: 10px 15px;
+
         }
         & div {
             display: block;
@@ -141,14 +155,14 @@ export const IconList = styled.div`
 
 `;
 export const Line = styled.span`
-position: absolute;
-        top: 15px;
-        transition: transform 0.3s, top 0.3s, width 0.3s;
-        
-        content: '';
-        width: 100%;
-        height: 2px;
-        background-color: #000;
+    position: absolute;
+    top: 15px;
+    transition: transform 0.3s, top 0.3s, width 0.3s, background 0.3s;
+    
+    content: '';
+    width: 100%;
+    height: 2px;
+    background-color: #000;
 `;
 export const List = styled.ul`
     display: flex;
