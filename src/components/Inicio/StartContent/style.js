@@ -12,7 +12,13 @@ export const ContainerWrite = styled.section`
 
     gap: 100px;
 
-    padding: 100px 15%;
+    padding: 50px 15%;
+    padding-top: 110px;
+
+    @media only screen and (max-width: 1200px){
+        padding: 50px 15%;
+    }
+
     a {
         display: flex;
         justify-content: center;
