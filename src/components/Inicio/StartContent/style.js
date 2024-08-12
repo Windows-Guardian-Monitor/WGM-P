@@ -12,7 +12,13 @@ export const ContainerWrite = styled.section`
 
     gap: 100px;
 
-    padding: 100px 15%;
+    padding: 50px 15%;
+    padding-top: 110px;
+
+    @media only screen and (max-width: 1200px){
+        padding: 50px 15%;
+    }
+
     a {
         display: flex;
         justify-content: center;
@@ -37,8 +43,11 @@ export const TextoWrite = styled.div`
     grid-column: span 2;
     
     h1, h1 span {
-        font-size: 2rem;
+        font-size: 2.5rem;
         font-weight: 900;
+    }
+    p {
+        font-size: 23px;
     }
     h1 span:nth-child(1){
         color: ${hover};
