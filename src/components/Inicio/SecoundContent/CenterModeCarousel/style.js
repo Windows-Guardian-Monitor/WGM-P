@@ -12,21 +12,22 @@ export const IconCarrossel = styled.div`
     align-items: center;
 
     transform-origin: bottom center;
-    transition: transform 0.2s;
 
-    margin-top: 25px;
+    margin-top: 12px;
     cursor: pointer;
 
-    &:hover{
-        transform: scale(1.3);
+    &:hover img{
+        transform: scale(1.2);
     }
     &:active {
         cursor: grabbing;
     }
     
     & img {
-        height: 50px;
+        height: 70px;
         user-select: none;
+        transform-origin: bottom center;
+        transition: transform 0.2s;
     }
     & span{ 
         user-select: none;

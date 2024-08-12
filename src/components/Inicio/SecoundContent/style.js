@@ -16,7 +16,7 @@ export const SecondContent = styled.section`
     flex-direction: column;
 
     gap: 30px;
-    `;
+`;
 export const TextContent = styled.article`
     display: flex;
     flex-direction: column;
@@ -38,26 +38,33 @@ export const TextContent = styled.article`
     align-items: center;
     cursor: pointer;
     }
+
+    & a:last-child {
+        margin-top: -20px;
+    }
 `;
 export const VejaContent = styled.div`
     display: flex;
     align-items: center;
-    justify-content: star;
+    justify-content: center;
+    gap: 3px;
 
-    margin-top: -15px;
-
+    padding: 0 45px 10px;
     transition: margin 0.2s;
+
     &:hover {
         margin-left: 5px;
     }
     
     & span {
+        color: ${hover};
+        font-weight: 700;
         transition: padding 0.2s;
-        font-weight: 800;
-        color: ${hover}
+
     }
 
     &:hover span {
         padding-right: 5px;
     }
+
 `;

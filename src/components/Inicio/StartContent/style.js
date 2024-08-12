@@ -84,7 +84,7 @@ export const DownloadButtom = styled.div`
         align-items: center;
     
         position: relative;
-        transition: color 0.3s;
+        transition: color 0.3s, height 0.3s;
 
         span{
             z-index: -1;
@@ -105,7 +105,6 @@ export const DownloadButtom = styled.div`
             animation: baixeAgora 1s infinite;
             animation-delay: 0.7s;
             height: calc(100% - 5px);
-            transition: height 0.3s;
         }
     }
 
