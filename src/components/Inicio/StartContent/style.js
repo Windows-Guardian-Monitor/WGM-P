@@ -43,8 +43,11 @@ export const TextoWrite = styled.div`
     grid-column: span 2;
     
     h1, h1 span {
-        font-size: 2rem;
+        font-size: 2.5rem;
         font-weight: 900;
+    }
+    p {
+        font-size: 23px;
     }
     h1 span:nth-child(1){
         color: ${hover};
