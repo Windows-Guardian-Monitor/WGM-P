@@ -2,7 +2,7 @@ import styled, {css} from "styled-components";
 
 export const hover = "#1171FF";
 
-export const HeaderAnimation = styled.div`
+export const HeaderAnimation = styled.section`
     @media only screen and (max-width: 1020px){
         
         position: fixed;
