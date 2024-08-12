@@ -2,17 +2,20 @@ import styled, {css} from "styled-components";
 
 export const hover = "#1171FF";
 
-export const HeaderAnimation = styled.div`
+export const HeaderAnimation = styled.section`
     @media only screen and (max-width: 1020px){
         
-        position: absolute;
+        position: fixed;
         top: 0;
         left: 0;
         z-index: 49;
         width: 100%;
-        height: ${({isOpen}) => (isOpen ? "100vh" : "65px")};
+        height: ${({isOpen}) => (isOpen ? "100vh" : "50px")};
         background: ${hover};
         transition: height ${({isOpen}) => (isOpen ? "0.3s" : "0.65s")};
+
+        
+        box-shadow: #1171FF88 0px 0px 10px 5px;
     }
 `;
 
