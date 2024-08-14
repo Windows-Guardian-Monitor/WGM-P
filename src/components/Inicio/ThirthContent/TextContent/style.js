@@ -6,6 +6,15 @@ export const ContainerFather = styled.div`
     height: 250px;
     border-radius: 30px;
     overflow: hidden;
+
+    ${props =>
+        !props.isWindow && css`
+            transition: transform 0.2s;
+
+            &:hover{
+                transform: translateY(-10px);
+            }
+        `}
 `;
 export const ContainerTransparent = styled.div`
     cursor: pointer;
