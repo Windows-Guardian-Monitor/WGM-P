@@ -1,3 +1,4 @@
+import Footer from "../Footer/index.jsx";
 import SecoundContent from "./SecoundContent";
 import StartContent from "./StartContent";
 import ThirthContent from "./ThirthContent";
@@ -9,6 +10,7 @@ export default function Inicio() {
 			<StartContent />
 			<SecoundContent />
 			<ThirthContent />
+			<Footer></Footer>
 		</InicioContent>
 	);
 }
