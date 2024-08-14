@@ -17,7 +17,7 @@ export default function TextContent({titulo, texto, destaque1, destaque2}) {
 	};
 
 	return (
-		<ContainerFather>
+		<ContainerFather isWindow={isWindow} >
 			<ContainerTransparent onClick={toggleWindow} isWindow={isWindow} />
 
 			<Container isWindow={isWindow}>
