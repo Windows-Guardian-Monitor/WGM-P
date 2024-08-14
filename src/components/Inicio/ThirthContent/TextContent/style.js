@@ -35,7 +35,14 @@ export const Container = styled.div`
         display: flex;
         flex-direction: column;
         gap: 15px;
-        margin-top: 15px;
+        
+    ${props =>
+        props.isWindow &&
+        css`
+            @media only screen and (max-width: 510px){
+                margin-top: 15px;
+            }
+        `}
     }
 
     display: flex;
