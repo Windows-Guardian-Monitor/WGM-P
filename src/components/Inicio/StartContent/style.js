@@ -12,11 +12,11 @@ export const ContainerWrite = styled.section`
 
     gap: 100px;
 
-    padding: 50px 15%;
+    padding: 50px 10%;
     padding-top: 110px;
 
     @media only screen and (max-width: 1200px){
-        padding: 50px 15%;
+        padding: 50px 10%;
     }
 
     a {

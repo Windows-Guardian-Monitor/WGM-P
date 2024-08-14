@@ -25,13 +25,8 @@ export const GlobalStyle = createGlobalStyle`
         scroll-behavior: smooth;
 
     }
-    *::selection {
-        background: #1171FF;
-        color: #cee1ff
-    }
     body{
         background: #fff;
-        
     }
 
     ::-webkit-scrollbar {

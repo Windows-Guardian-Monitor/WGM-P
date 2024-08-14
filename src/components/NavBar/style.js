@@ -132,7 +132,7 @@ export const IconList = styled.div`
                         `
 					: css`
                         top: 8px;
-                        `}
+                    `}
     }
 
     & span:nth-child(2) {
