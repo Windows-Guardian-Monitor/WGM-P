@@ -35,6 +35,9 @@ export const Container = styled.div`
         display: flex;
         flex-direction: column;
         gap: 15px;
+        @media only screen and (max-width: 510px){
+            margin-top: 15px;
+        }
     }
 
     display: flex;
@@ -81,8 +84,8 @@ export const Close = styled.h4`
             justify-content: center;
             align-items: center;
 
-            width: 50px;
-            height: 50px;
+            width: 40px;
+            height: 40px;
 
             border-radius: 50%;
 
