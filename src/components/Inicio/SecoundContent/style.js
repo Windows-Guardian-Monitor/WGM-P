@@ -3,11 +3,11 @@ import {hover} from "../../NavBar/style";
 
 export const SecondContent = styled.section`
     width: 100%;
-    padding: 50px 15%;
+    padding: 50px 10%;
     padding-top: 110px;
 
     @media only screen and (max-width: 1200px){
-        padding: 50px 15%;
+        padding: 50px 10%;
     }
 
     background: #fff;
@@ -22,13 +22,13 @@ export const TextContent = styled.article`
     flex-direction: column;
     align-items: center;
     gap: 30px;
+    text-align: center;
 
     & h2 {
         font-size: 2.5rem;
         font-weight: 900;
     }
     & p {
-        text-align: center;
         font-size: 23px;
     }
 
@@ -47,7 +47,6 @@ export const VejaContent = styled.div`
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 3px;
 
     padding: 0 45px 10px;
     transition: margin 0.2s;
@@ -58,9 +57,8 @@ export const VejaContent = styled.div`
     
     & span {
         color: ${hover};
-        font-weight: 700;
+        font-weight: 800;
         transition: padding 0.2s;
-
     }
 
     &:hover span {
