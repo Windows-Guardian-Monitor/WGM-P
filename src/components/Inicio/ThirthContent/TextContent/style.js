@@ -6,6 +6,15 @@ export const ContainerFather = styled.div`
     height: 250px;
     border-radius: 30px;
     overflow: hidden;
+
+    ${props =>
+        !props.isWindow && css`
+            transition: transform 0.2s;
+
+            &:hover{
+                transform: translateY(-10px);
+            }
+        `}
 `;
 export const ContainerTransparent = styled.div`
     cursor: pointer;
@@ -35,9 +44,14 @@ export const Container = styled.div`
         display: flex;
         flex-direction: column;
         gap: 15px;
-        @media only screen and (max-width: 510px){
-            margin-top: 15px;
-        }
+        
+    ${props =>
+        props.isWindow &&
+        css`
+            @media only screen and (max-width: 510px){
+                margin-top: 15px;
+            }
+        `}
     }
 
     display: flex;

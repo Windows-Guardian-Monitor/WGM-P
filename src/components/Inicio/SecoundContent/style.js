@@ -5,9 +5,12 @@ export const SecondContent = styled.section`
     width: 100%;
     padding: 50px 10%;
     padding-top: 110px;
+    padding-bottom: 100px;
 
     @media only screen and (max-width: 1200px){
         padding: 50px 10%;
+        padding-top: 100px;
+        padding-bottom: 100px;
     }
 
     background: #fff;
