@@ -1,7 +1,11 @@
+import StartContent from "./StartContent";
+import Footer from "../Footer/"
+
 export default function SobreNos() {
 	return (
-		<div>
-			sobre nos Windows Guardiam Monitor
-		</div>
+		<>
+			<StartContent />
+			<Footer />
+		</>
 	);
 }
