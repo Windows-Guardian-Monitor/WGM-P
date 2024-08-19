@@ -146,10 +146,11 @@ export const H4Colores = styled.h4`
     padding-bottom: 15px;
     border-bottom: 1px solid #333;
 
-    background: linear-gradient(45deg, #1171FF, #5A3CFF, #0145AA, #1171FF, #5A3CFF);
+    /* background: linear-gradient(45deg, #1171FF, #5A3CFF, #0145AA, #1171FF, #5A3CFF); */
+    background: linear-gradient(45deg, #1171FF, #3B18FF, #920DFF, #0145AA, #1171FF, #3B18FF);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
-    background-size: 400% 100%;
+    background-size: 500% 100%;
 
     animation: colores 2s infinite linear;
     animation-delay: 0s;
