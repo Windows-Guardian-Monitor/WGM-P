@@ -18,7 +18,7 @@ export default function Footer() {
 				>
 					Desenvolvedores
 				</a>
-				<Link to="/Download">Por que WGM?</Link>
+				<Link to="/Sobre-Nos">Por que WGM?</Link>
 				<Link to="/Download">Download</Link>
 			</ContentFooter>
 		</ConteinerFooter>
