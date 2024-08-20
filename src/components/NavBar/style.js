@@ -37,7 +37,6 @@ export const Header = styled.header`
 
     overflow: hidden;
 
-    box-shadow: #B0B7BA88 0px 0px 10px 5px;
 
     @media only screen and (max-width: 510px){
         & img {
