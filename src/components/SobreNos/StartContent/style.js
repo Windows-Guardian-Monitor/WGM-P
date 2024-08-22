@@ -1,14 +1,14 @@
 import styled from "styled-components";
 
 export const Container = styled.section`
-    padding: 50px 100px;
+    padding: 150px 100px;
     padding-top: 110px;
     @media only screen and (max-width: 1200px){
         padding: 50px 10%;
         padding-top: 80px;
     }
 
-    background: linear-gradient(27deg, #5A3CFF, #3385FF);
+    background: #fff;
 
     display: flex;
     flex-wrap: wrap-reverse;
@@ -16,10 +16,6 @@ export const Container = styled.section`
 
     @media only screen and (max-width: 1400px){
         gap: 70px;
-    }
-
-    & * {
-        color: #fff;
     }
 `
 export const ContentTitle = styled.div`
@@ -39,7 +35,7 @@ export const Title = styled.h1`
 
 export const Text = styled.p`
     font-size: 27px;
-    `
+`
 export const ContentImage = styled.div`
     width: 30%;
     position: relative;
@@ -56,6 +52,8 @@ export const ContentImage = styled.div`
         width: 400px;
         object-fit: contain;
 
+        user-select: none;
+
         @media only screen and (max-width: 1700px){
             width: 400px;
         }
@@ -68,8 +66,8 @@ export const ContentImage = styled.div`
         position: absolute;
         top: 40%;
         right:60%;
-        transform: translate(-50%, -50%) rotate(-45deg);
-        transform-origin: top center;
+        transform-origin: 40% 20%;
+        transform: translate(-50%, -50%);
 
 
         width: 130px;
@@ -84,13 +82,13 @@ export const ContentImage = styled.div`
 
         @keyframes rotation {
             0% {
-                transform: translate(-50%, -50%)  rotate(-15deg);
+                transform: translate(-50%, -50%)  rotate(-20deg);
             }
             50% {
-                transform: translate(-50%, -50%)  rotate(-70deg);
+                transform: translate(-50%, -50%)  rotate(-75deg);
             }
             100% {
-                transform: translate(-50%, -50%)  rotate(-15deg);
+                transform: translate(-50%, -50%)  rotate(-20deg);
             }
         }
     }
