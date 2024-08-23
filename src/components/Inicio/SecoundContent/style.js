@@ -1,5 +1,4 @@
 import styled from "styled-components";
-import {hover} from "../../NavBar/style";
 
 export const SecondContent = styled.section`
     width: 100%;
@@ -13,7 +12,7 @@ export const SecondContent = styled.section`
         padding-bottom: 100px;
     }
 
-    background: #fff;
+    background: ${props => props.theme.colors.primary};
 
     display: flex;
     flex-direction: column;
@@ -59,7 +58,7 @@ export const VejaContent = styled.div`
     }
     
     & span {
-        color: ${hover};
+        color: ${props => props.theme.colors.blue};
         font-weight: 800;
         transition: padding 0.2s;
     }

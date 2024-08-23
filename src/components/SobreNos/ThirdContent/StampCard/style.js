@@ -1,14 +1,21 @@
-import styled from "styled-components";
+import styled, { css } from "styled-components";
 
 export const Container = styled.div`
-    background: #fff;
+    background: ${props => props.theme.colors.primary};
     
     padding: 25px 15px;
     max-width: 400px;
     min-height: 150px;
 
     border-radius: 30px;
-    box-shadow: 0 0 10px 5px #ccc;
+    ${props => props.isDarkMode
+        ? css`
+            box-shadow: 0 0 10px 5px ${props.theme.colors.transparent};
+        `
+        : css`
+            box-shadow: 0 0 10px 5px ${props.theme.colors.transparent}20;
+        `
+    }
 
     display: flex;
     justify-content: center;
@@ -64,8 +71,15 @@ export const Title = styled.h1`
     & * {
         font-size: 17px;
         font-weight: 700;
-        color: ${props => props.color};
-        background: ${props => props.color}22;
+        color: ${props => props.color}ff !important;
+        ${props => props.isDarkMode
+        ? css`
+            background: ${props => props.color}60;
+        `
+        : css`
+            background: ${props => props.color}22;
+        `
+    }
         border-radius: 20px;
         padding: 3px 15px;
         width: fit-content;

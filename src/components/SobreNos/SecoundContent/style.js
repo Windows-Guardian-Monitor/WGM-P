@@ -2,14 +2,6 @@ import styled from "styled-components";
 
 
 export const Conect = styled.section`
-    /* 
-    background: linear-gradient(27deg, #5A3CFF, #3385FF);
-
-    & * {
-        color: #fff;
-    }
-     */
-
     display: flex;
     flex-wrap: wrap;
     justify-content: center;

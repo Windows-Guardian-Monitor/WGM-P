@@ -1,3 +1,4 @@
+import { useTheme } from "styled-components";
 import {
 	About,
 	Container,
@@ -9,6 +10,9 @@ import {
 import React from "react";
 
 export default function StampCard({children, href, target, color}) {
+	const theme = useTheme();
+	const isDarkMode = theme.title === "dark";
+
 	let imgElement = null;
 	let titleElement = null;
 	let textElement = null;
@@ -25,12 +29,12 @@ export default function StampCard({children, href, target, color}) {
 
 	return (
 		<a href={href} target={target}>
-			<Container>
+			<Container isDarkMode={isDarkMode}>
 				<ContainerStamp>
 					<StampImage>{imgElement}</StampImage>
 				</ContainerStamp>
 				<About>
-					<Title color={color}>{titleElement}</Title>
+					<Title isDarkMode={isDarkMode} color={color}>{titleElement}</Title>
 					<TextContent>{textElement}</TextContent>
 				</About>
 			</Container>

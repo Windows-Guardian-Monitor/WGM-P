@@ -5,7 +5,7 @@ export const CardContainer = styled.div`
     position: relative;
     width: 25%;
 
-    background: #fff;
+    background: ${props => props.theme.colors.primary};
     padding: 30px 35px 100px;
     border-radius: 30px;
 
@@ -14,7 +14,14 @@ export const CardContainer = styled.div`
 
     gap: 30px;
 
-    box-shadow: 0 0 10px 5px #ccc;
+    ${props => props.isDarkMode
+        ? css`
+            box-shadow: 0 0 10px 5px ${props.theme.colors.transparent};
+        `
+        : css`
+            box-shadow: 0 0 10px 5px ${props.theme.colors.transparent}20;
+        `
+    }
 
     @media only screen and (max-width: 768px){
         & img{
@@ -92,9 +99,9 @@ export const MiniContent = styled.span`
     @media only screen and (max-width: 500px){
         font-size: 15px;
     }
-    color: #1171ff;
+    color: ${props => props.theme.colors.blue} !important;
     font-weight: 700;
-    background: #1171ff22;
+    background: ${props => props.theme.colors.blue}22;
     border-radius: 20px;
     padding: 3px 15px;
     width: fit-content;

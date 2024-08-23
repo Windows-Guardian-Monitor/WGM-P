@@ -8,7 +8,7 @@ export const Container = styled.section`
         padding-top: 80px;
     }
 
-    background: #fff;
+    background: ${props=> props.theme.colors.primary};
 
     display: flex;
     flex-wrap: wrap-reverse;

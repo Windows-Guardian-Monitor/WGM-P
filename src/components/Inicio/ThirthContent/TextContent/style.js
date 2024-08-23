@@ -36,7 +36,7 @@ export const ContainerTransparent = styled.div`
             height: 100vh;
             width: 100vw;
 
-            background: #000A1Eaa;
+            background: ${props=> props.theme.colors.transparent}aa;
         `}
 `;
 export const Container = styled.div`
@@ -64,7 +64,7 @@ export const Container = styled.div`
 
     padding: 40px 30px;
 
-    background: #fff;
+    background: ${props => props.theme.colors.primary};
 
     flex: 0 0 auto;
 
@@ -103,11 +103,11 @@ export const Close = styled.h4`
 
             border-radius: 50%;
 
-            background: #000A1E10;
+            background: ${props=> props.theme.colors.transparent}10;
             transition: background 0.2s;
 
             &:hover {
-                background: #1171FF11;
+                background: ${props=> props.theme.colors.blue}11;
             }
 
             & div {
@@ -125,11 +125,11 @@ export const Close = styled.h4`
                 position: absolute;
                 height: 2px;
                 width: 20px;
-                background: #000;
+                background: ${props=> props.theme.colors.secound};
                 transition: background 0.2s;
             }
             &:hover span{
-                background: #1171FF;
+                background: ${props=> props.theme.colors.blue};
             }
             & span:first-child{
                 transform: rotate(45deg);
@@ -144,7 +144,7 @@ export const H4Colores = styled.h4`
     font-weight: 1000;
 
     padding-bottom: 15px;
-    border-bottom: 1px solid #333;
+    border-bottom: 1px solid ${props=> props.theme.colors.transparent};
     background: linear-gradient(45deg, #1171FF, #3B18FF, #593BFF, #0145AA, #1171FF, #3B18FF);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;

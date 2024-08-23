@@ -2,14 +2,14 @@ import styled from "styled-components";
 
 export const ConteinerFooter = styled.footer`
     width: 100%;
-    background: #000511;
+    background: ${props => props.theme.colors.footer};
 
     display: flex;
     justify-content: center;
     align-items: center;
 
     & * {
-        color: #fff;
+        color: ${props => props.theme.colors.primary};
     }
 
     padding: 30px 5%;
@@ -28,10 +28,11 @@ export const ContentFooter = styled.div`
         font-size: 17px;
         font-weight: 300;
         position: relative;
+        color: #fff;
     }
     
     & a:hover {
-        color: #3385FF;
+        color: ${props => props.theme.colors.whiteblue};
     }
     & a::after {
         content: "";
@@ -43,7 +44,7 @@ export const ContentFooter = styled.div`
 
         width: 0%;
         height: 1px;
-        background: #3385FF;
+        background: ${props => props.theme.colors.whiteblue};
 
         transition: width 0.2s;
     }

@@ -1,3 +1,5 @@
+import React from "react";
+import {useTheme} from "styled-components";
 import StampCard from "./StampCard";
 import {Container, ContentTitle, Third, Title} from "./style";
 import htmlLogo from "../../../images/icons/html.png";
@@ -11,9 +13,12 @@ import vscodeLogo from "../../../images/icons/vscode.png";
 import mysqlLogo from "../../../images/icons/mysql.png";
 import gitLogo from "../../../images/icons/git.png";
 import githubLogo from "../../../images/icons/github.png";
+import githubDarkLogo from "../../../images/icons/github-dark.png";
 import blazorLogo from "../../../images/icons/blazor.png";
 
 export default function ThirdContent() {
+	const theme = useTheme();
+	const isDarkMode = theme.title === "dark";
 	return (
 		<Third>
 			<ContentTitle>
@@ -166,9 +171,9 @@ export default function ThirdContent() {
 				<StampCard
 					href={"https://github.com/"}
 					target={"_blank"}
-					color={"#181717"}
+					color={isDarkMode ? "#9c9c9c" : "#181717"}
 				>
-					<img src={githubLogo} />
+					<img src={isDarkMode ? githubDarkLogo : githubLogo} />
 					<h1>Github</h1>
 					<p>
 						GitHub é uma plataforma baseada em nuvem que hospeda
