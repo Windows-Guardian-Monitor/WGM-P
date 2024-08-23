@@ -16,6 +16,37 @@ export const CardContainer = styled.div`
 
     box-shadow: 0 0 10px 5px #ccc;
 
+    @media only screen and (max-width: 768px){
+        & img{
+        bottom: 25px;
+        right: 25px;
+
+
+        ${({ image }) => (image == "handshake" &&
+        css`
+            animation: handAnimation 1.5s infinite linear;
+            animation-delay: 0.5s;
+        `)}
+
+        ${({ image }) => (image == "star" &&
+        css`
+            top: 25px;
+            right: 25px;
+            animation: starAnimation 1s infinite;
+            animation-delay: 0.5s;
+        `)}
+
+        ${({ image }) => (image == "heart" &&
+        css`
+            transform-origin: 70% 70%;
+
+            animation: heartAnimation 1s infinite;
+            animation-delay: 0.5s;
+        `)}
+        
+    }
+    }
+
     @media only screen and (max-width: 1500px){
         width: 100%;
     }
@@ -27,7 +58,7 @@ export const CardContainer = styled.div`
 
         ${({ image }) => (image == "handshake" &&
         css`
-            animation: handAnimation 1s infinite linear;
+            animation: handAnimation 1.5s infinite linear;
             animation-delay: 0.5s;
         `)}
 
@@ -80,7 +111,7 @@ export const ImageOne = styled.img`
     bottom: -50px;
     right: -50px;
 
-    ${({ image }) => (image == "handshake" &&
+    ${({ image }) => (image == "heart" &&
         css`
             width: 60px;
             @keyframes heartAnimation {
