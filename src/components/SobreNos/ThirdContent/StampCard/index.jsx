@@ -8,7 +8,7 @@ import {
 } from "./style";
 import React from "react";
 
-export default function StampCard({children}) {
+export default function StampCard({children, href, target, color}) {
 	let imgElement = null;
 	let titleElement = null;
 	let textElement = null;
@@ -24,14 +24,16 @@ export default function StampCard({children}) {
 	});
 
 	return (
-		<Container>
-			<ContainerStamp>
-				<StampImage>{imgElement}</StampImage>
-			</ContainerStamp>
-			<About>
-				<Title>{titleElement}</Title>
-				<TextContent>{textElement}</TextContent>
-			</About>
-		</Container>
+		<a href={href} target={target}>
+			<Container>
+				<ContainerStamp>
+					<StampImage>{imgElement}</StampImage>
+				</ContainerStamp>
+				<About>
+					<Title color={color}>{titleElement}</Title>
+					<TextContent>{textElement}</TextContent>
+				</About>
+			</Container>
+		</a>
 	);
 }

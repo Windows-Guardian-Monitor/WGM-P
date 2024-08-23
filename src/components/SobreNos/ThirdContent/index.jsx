@@ -27,7 +27,11 @@ export default function ThirdContent() {
 				</p>
 			</ContentTitle>
 			<Container>
-				<StampCard>
+				<StampCard
+					href={"https://visualstudio.microsoft.com/pt-br/downloads/"}
+					target={"_blank"}
+					color={"#5C2D91"}
+				>
 					<img src={vsLogo} />
 					<h1>Visual Studio</h1>
 					<p>
@@ -36,7 +40,11 @@ export default function ThirdContent() {
 					</p>
 				</StampCard>
 
-				<StampCard>
+				<StampCard
+					href={"https://code.visualstudio.com/download"}
+					target={"_blank"}
+					color={"#007ACC"}
+				>
 					<img src={vscodeLogo} />
 					<h1>Visual Studio Code</h1>
 					<p>
@@ -46,7 +54,11 @@ export default function ThirdContent() {
 					</p>
 				</StampCard>
 
-				<StampCard>
+				<StampCard
+					href={"https://developer.mozilla.org/en-US/docs/Web/HTML"}
+					target={"_blank"}
+					color={"#E34F26"}
+				>
 					<img src={htmlLogo} />
 					<h1>HTML</h1>
 					<p>
@@ -55,7 +67,11 @@ export default function ThirdContent() {
 					</p>
 				</StampCard>
 
-				<StampCard>
+				<StampCard
+					href={"https://developer.mozilla.org/en-US/docs/Web/CSS"}
+					target={"_blank"}
+					color={"#1572B6"}
+				>
 					<img src={cssLogo} />
 					<h1>CSS</h1>
 					<p>
@@ -64,7 +80,11 @@ export default function ThirdContent() {
 					</p>
 				</StampCard>
 
-				<StampCard>
+				<StampCard
+					href={"https://developer.mozilla.org/en-US/docs/Web/JavaScript"}
+					target={"_blank"}
+					color={"#F7DF1E"}
+				>
 					<img src={javascriptLogo} />
 					<h1>Javascript</h1>
 					<p>
@@ -74,7 +94,11 @@ export default function ThirdContent() {
 					</p>
 				</StampCard>
 
-				<StampCard>
+				<StampCard
+					href={"https://react.dev/"}
+					target={"_blank"}
+					color={"#61DAFB"}
+				>
 					<img src={reactLogo} />
 					<h1>React</h1>
 					<p>
@@ -84,7 +108,11 @@ export default function ThirdContent() {
 					</p>
 				</StampCard>
 
-				<StampCard>
+				<StampCard
+					href={"https://styled-components.com/"}
+					target={"_blank"}
+					color={"#DB7093"}
+				>
 					<img src={styledcomponentsLogo} />
 					<h1>Styled Components</h1>
 					<p>
@@ -93,7 +121,11 @@ export default function ThirdContent() {
 					</p>
 				</StampCard>
 
-				<StampCard>
+				<StampCard
+					href={"https://learn.microsoft.com/en-us/dotnet/csharp/"}
+					target={"_blank"}
+					color={"#7138c0"}
+				>
 					<img src={cLogo} />
 					<h1>C#</h1>
 					<p>
@@ -103,7 +135,11 @@ export default function ThirdContent() {
 					</p>
 				</StampCard>
 
-				<StampCard>
+				<StampCard
+					href={"https://www.mysql.com/"}
+					target={"_blank"}
+					color={"#00758F"}
+				>
 					<img src={mysqlLogo} />
 					<h1>MySQL</h1>
 					<p>
@@ -113,7 +149,11 @@ export default function ThirdContent() {
 					</p>
 				</StampCard>
 
-				<StampCard>
+				<StampCard
+					href={"https://git-scm.com/"}
+					target={"_blank"}
+					color={"#F05032"}
+				>
 					<img src={gitLogo} />
 					<h1>Git</h1>
 					<p>
@@ -123,7 +163,11 @@ export default function ThirdContent() {
 					</p>
 				</StampCard>
 
-				<StampCard>
+				<StampCard
+					href={"https://github.com/"}
+					target={"_blank"}
+					color={"#181717"}
+				>
 					<img src={githubLogo} />
 					<h1>Github</h1>
 					<p>
@@ -133,7 +177,13 @@ export default function ThirdContent() {
 					</p>
 				</StampCard>
 
-				<StampCard>
+				<StampCard
+					href={
+						"https://learn.microsoft.com/en-us/aspnet/core/blazor/?view=aspnetcore-8.0"
+					}
+					target={"_blank"}
+					color={"#773cbb"}
+				>
 					<img src={blazorLogo} />
 					<h1>Blazor</h1>
 					<p>

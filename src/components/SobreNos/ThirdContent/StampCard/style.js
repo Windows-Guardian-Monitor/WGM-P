@@ -27,6 +27,11 @@ export const Container = styled.div`
         flex-direction: column;
         max-width: 100%;
     }
+
+    transition: all 0.2s;
+    &:hover{
+        transform: scale(1.03);
+    }
 `
 
 export const ContainerStamp = styled.div`
@@ -58,9 +63,9 @@ export const About = styled.div`
 export const Title = styled.h1`
     & * {
         font-size: 17px;
-        color: #1171ff;
         font-weight: 700;
-        background: #1171ff22;
+        color: ${props => props.color};
+        background: ${props => props.color}22;
         border-radius: 20px;
         padding: 3px 15px;
         width: fit-content;
