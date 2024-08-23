@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 export const Third = styled.section`
-    background: linear-gradient(to bottom, #fff, #ffffff00);
+    background: linear-gradient(to bottom, #fff, #fff, #ffffff00);
 
     padding: 150px 10%;
     padding-top: 110px;
