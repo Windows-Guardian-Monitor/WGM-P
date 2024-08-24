@@ -39,6 +39,7 @@ export default function Footer() {
 					<Link to="/">Página inicial</Link>
 					<Link to="/Sobre-Nos">Por que WGM?</Link>
 					<Link to="/Download">Download</Link>
+					<Link to="/Termos-de-Uso">Termos de Uso</Link>
 				</ContainerContent>
 			</ContentFooter>
 			<LogoContent>

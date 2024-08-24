@@ -20,7 +20,7 @@ export const ConteinerFooter = styled.footer`
         font-weight: 200;
     }
 
-    padding: 70px 5%;
+    padding: 70px 5% 30px;
 `
 
 export const ContentFooter = styled.div`
