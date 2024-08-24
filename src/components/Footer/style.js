@@ -13,7 +13,7 @@ export const ConteinerFooter = styled.footer`
         color: #fff;
     }
 
-    padding: 30px 5%;
+    padding: 70px 5%;
 `
 
 export const ContentFooter = styled.div`
@@ -21,7 +21,11 @@ export const ContentFooter = styled.div`
 
     display: flex;
     justify-content: center;
-    gap: 30px;
+    gap: 100px;
+
+    @media only screen and (max-width: 1200px) {
+        gap: 50px;
+    }
 
     flex-wrap: wrap;
 
@@ -29,6 +33,7 @@ export const ContentFooter = styled.div`
         font-size: 17px;
         font-weight: 300;
         position: relative;
+        width: fit-content;
     }
     
     & a:hover {
@@ -55,4 +60,13 @@ export const ContentFooter = styled.div`
     & img {
         height: 20px;
     }
+`
+
+export const ContainerContent = styled.section`
+    display: flex;
+    flex-direction: column;
+
+    width: 200px;
+
+    gap: 10px;
 `
