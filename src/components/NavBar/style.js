@@ -1,6 +1,4 @@
-import styled, {css} from "styled-components";
-
-export const hover = "#1171FF";
+import styled, { css } from "styled-components";
 
 export const HeaderAnimation = styled.section`
     @media only screen and (max-width: 1020px){
@@ -10,12 +8,18 @@ export const HeaderAnimation = styled.section`
         left: 0;
         z-index: 49;
         width: 100%;
-        height: ${({isOpen}) => (isOpen ? "100vh" : "50px")};
-        background: ${hover};
-        transition: height ${({isOpen}) => (isOpen ? "0.3s" : "0.65s")};
+        height: ${({ isOpen }) => (isOpen ? "100vh" : "50px")};
+        ${props => props.isDarkMode
+        ? css`
+            background: ${props => props.theme.colors.blue};
+        `
+        : css`
+            background: ${props => props.theme.colors.blue};
+        `
+    }
+        transition: height ${({ isOpen }) => (isOpen ? "0.3s" : "0.65s")};
 
-        
-        box-shadow: #1171FF88 0px 0px 10px 5px;
+        box-shadow: ${props => props.theme.colors.blue}88 0px 0px 10px 5px;
     }
 `;
 
@@ -33,11 +37,10 @@ export const Header = styled.header`
     align-items: center;
     justify-content: center;
 
-    background: #fff;
+    background: ${props => props.theme.colors.primary};
 
     overflow: hidden;
 
-    box-shadow: #B0B7BA88 0px 0px 10px 5px;
 
     @media only screen and (max-width: 510px){
         & img {
@@ -48,11 +51,11 @@ export const Header = styled.header`
     @media only screen and (max-width: 1020px){
         & img {
             ${props =>
-					props.isOpen
-						? css`
+        props.isOpen
+            ? css`
                             opacity: 0;
                         `
-						: css`
+            : css`
                             animation: logo 1s;
                         `}
             transition: opacity 0.2s;
@@ -71,7 +74,7 @@ export const Header = styled.header`
         }
 
         & {
-            height: ${({isOpen}) => (isOpen ? "100vh" : "70px")};
+            height: ${({ isOpen }) => (isOpen ? "100vh" : "70px")};
             transition: height 0.5s;
             flex-direction: column;
             align-items: start;
@@ -90,7 +93,7 @@ export const Header = styled.header`
             align-items: center;
             gap: 50px;
 
-            margin-top: ${({isOpen}) => (isOpen ? "0px" : "120px")};
+            margin-top: ${({ isOpen }) => (isOpen ? "0px" : "120px")};
             transition: margin-top 0.3s;
 
             top: 50%;
@@ -120,43 +123,88 @@ export const IconList = styled.div`
 	-moz-appearance: none;
 
     &:hover span{
-        background: ${hover};
+        background: ${props => props.theme.colors.blue};
     }
 
     & span:nth-child(1) {
         content: '';
         ${props =>
-				props.isOpen
-					? css`
-                        transform: rotate(45deg);
-                        `
-					: css`
-                        top: 8px;
-                    `}
+        props.isOpen
+            ? css`
+                transform: rotate(45deg);
+            `
+            : css`
+                top: 8px;
+            `
+    }
     }
 
     & span:nth-child(2) {
         content: '';
         ${props =>
-				props.isOpen &&
-				css`
-                    width: 0;
-                `}
+        props.isOpen &&
+        css`
+            width: 0;
+        `}
     }
 
     & span:nth-child(3) {
         content: '';
         ${props =>
-				props.isOpen
-					? css`
-                        transform: rotate(-45deg);
-                        `
-					: css`
-                        top: 22px;
-                        `}
+        props.isOpen
+            ? css`
+                transform: rotate(-45deg);
+            `
+            : css`
+                top: 22px;
+                `
+    }
     }
 
 `;
+export const Switch = styled.span`
+    flex: 0 0 auto;
+
+    cursor: pointer;
+
+    width: 60px;
+    height: 28px;
+
+    position: relative;
+
+    border-radius: 50px;
+
+    &::after {
+        content: "";
+        width: 25px;
+        height: 25px;
+        
+        border-radius: 15px;
+
+        background: ${props => props.theme.colors.primary};
+
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        transition: left 0.5s;
+    }
+
+    ${props => props.isDarkMode
+        ? css`
+            background: ${props => props.theme.colors.secound};
+            &::after{
+                left: calc(60px - 25px - 3px);
+            }
+            `
+        : css`
+            background: ${props => props.theme.colors.secound};
+            &::after{
+                left: 3px;
+            }
+        `
+    }
+`
+
 export const Line = styled.span`
     position: absolute;
     top: 15px;
@@ -165,7 +213,7 @@ export const Line = styled.span`
     content: '';
     width: 100%;
     height: 2px;
-    background-color: #000;
+    background-color: ${props => props.theme.colors.secound};
 `;
 export const List = styled.ul`
     display: flex;
@@ -186,7 +234,7 @@ export const ContentList = styled.li`
     }
 
     & *:hover {
-        color: ${hover};
+        color: ${props => props.theme.colors.blue};
         transition: color 0.2s;
     }
     & *::after{
@@ -202,7 +250,7 @@ export const ContentList = styled.li`
         position: absolute;
         transition: transform 0.2s, width 0.2s, left 0.2s;
 
-        background: ${hover};
+        background: ${props => props.theme.colors.blue};
     }
     & *:hover::after{
         width: 100%;

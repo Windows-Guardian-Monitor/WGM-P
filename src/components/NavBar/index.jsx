@@ -1,3 +1,4 @@
+// index.jsx (NavBar)
 import {Link} from "react-router-dom";
 import {
 	ContentList,
@@ -6,12 +7,18 @@ import {
 	IconList,
 	Line,
 	List,
-	Logo
+	Logo,
+	Switch
 } from "./style";
 import {useState} from "react";
 import logoImage from "../../images/logoPlus.png";
+import logoImageDark from "../../images/logoPlusDark.png";
+import {useTheme} from "styled-components";
 
-export default function NavBar() {
+export default function NavBar({toggleTheme}) {
+	const theme = useTheme();
+	const isDarkMode = theme.title === "dark";
+
 	const [isOpen, setIsOpen] = useState(false);
 
 	const handleToggle = () => {
@@ -20,9 +27,12 @@ export default function NavBar() {
 
 	return (
 		<>
-			<HeaderAnimation isOpen={isOpen}></HeaderAnimation>
+			<HeaderAnimation
+				isDarkMode={isDarkMode}
+				isOpen={isOpen}
+			></HeaderAnimation>
 			<Header isOpen={isOpen}>
-				<Logo src={logoImage} />
+				<Logo src={isDarkMode ? logoImageDark : logoImage} />
 				<List>
 					<ContentList>
 						<Link onClick={handleToggle} to="/">
@@ -39,8 +49,10 @@ export default function NavBar() {
 							Download
 						</Link>
 					</ContentList>
+
+					<Switch isDarkMode={isDarkMode} onClick={toggleTheme} />
 				</List>
-				<IconList onClick={handleToggle} isOpen={isOpen}>
+				<IconList  onClick={handleToggle} isOpen={isOpen}>
 					<Line></Line>
 					<Line></Line>
 					<Line></Line>

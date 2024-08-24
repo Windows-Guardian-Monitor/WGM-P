@@ -2,42 +2,52 @@ import styled from "styled-components";
 
 export const ConteinerFooter = styled.footer`
     width: 100%;
-    background: #000511;
-    margin-top: 50px;
+    background: ${props => props.theme.colors.footer};
 
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
 
+    gap: 50px;
+
     & * {
-        color: #fff;
+        color: #fff !important;
+    }
+
+    & p {
+        font-size: 17px;
+        font-weight: 200;
     }
 
     padding: 70px 5%;
 `
 
 export const ContentFooter = styled.div`
-    width: 60%;
 
     display: flex;
     justify-content: center;
     gap: 100px;
+    flex-wrap: wrap;
 
     @media only screen and (max-width: 1200px) {
         gap: 50px;
     }
 
-    flex-wrap: wrap;
+    & h1 {
+        margin-bottom: 20px;
+    }
 
     & a {
         font-size: 17px;
         font-weight: 300;
         position: relative;
         width: fit-content;
+        transition: color 0.2s;
     }
     
     & a:hover {
-        color: #3385FF;
+        color: ${props => props.theme.colors.whiteblue} !important;
     }
     & a::after {
         content: "";
@@ -49,7 +59,7 @@ export const ContentFooter = styled.div`
 
         width: 0%;
         height: 1px;
-        background: #3385FF;
+        background: ${props => props.theme.colors.whiteblue};
 
         transition: width 0.2s;
     }
@@ -70,3 +80,23 @@ export const ContainerContent = styled.section`
 
     gap: 10px;
 `
+
+export const LogoContent = styled.section`
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    p {
+        text-align: center;
+    }
+`
+
+export const Logo = styled.img`
+    height: 50px;
+    user-select: none;
+    flex: 0 0 auto;
+    @media only screen and (max-width: 510px){
+        height: 30px;
+    }
+`;

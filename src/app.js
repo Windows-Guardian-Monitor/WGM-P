@@ -1,4 +1,4 @@
-import {createGlobalStyle} from "styled-components";
+import styled, {createGlobalStyle} from "styled-components";
 
 export const GlobalStyle = createGlobalStyle`
     @font-face {
@@ -23,6 +23,7 @@ export const GlobalStyle = createGlobalStyle`
         color: initial;
 
         scroll-behavior: smooth;
+        
 
     }
     body{
@@ -50,3 +51,9 @@ export const GlobalStyle = createGlobalStyle`
 
 
 `;
+
+export const Father = styled.div`
+    & * {
+        color: ${props => props.theme.colors.secound};
+    }
+`

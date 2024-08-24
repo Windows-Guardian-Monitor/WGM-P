@@ -1,5 +1,4 @@
 import styled from "styled-components";
-import {hover} from "../../NavBar/style";
 
 export const ContainerWrite = styled.section`
     position: relative;
@@ -50,7 +49,7 @@ export const TextoWrite = styled.div`
         font-size: 23px;
     }
     h1 span:nth-child(1){
-        color: ${hover};
+        color: ${props=> props.theme.colors.blue};
     }
     h1 span:nth-child(2){
         margin-left: -5px;
@@ -67,9 +66,9 @@ export const DownloadButtom = styled.div`
     
     div{
         padding: 10px 40px;
-        color: ${hover};
+        color: ${props=> props.theme.colors.blue};
     
-        border: 2px solid ${hover};
+        border: 2px solid ${props=> props.theme.colors.blue};
         border-radius: 10px;
 
         overflow: hidden;
@@ -94,14 +93,14 @@ export const DownloadButtom = styled.div`
             content: "";
             width: 100%;
             height: 00%;
-            background: ${hover};
+            background: ${props=> props.theme.colors.blue};
             transition: height 0.3s;
         }
         &:hover span {
             height: 100%;
         }
         &:hover{
-            color: #fff;
+            color: ${props => props.theme.colors.primary};
             animation: baixeAgora 1s infinite;
             animation-delay: 0.7s;
             height: calc(100% - 5px);
@@ -110,13 +109,13 @@ export const DownloadButtom = styled.div`
 
     @keyframes baixeAgora {
         0%{
-            box-shadow: 0 0 0px 0px #5398FF;
+            box-shadow: 0 0 0px 0px ${props => props.theme.colors.blue}80;
         }
         50%{
-            box-shadow: 0 0 7px 3px #5398FF;
+            box-shadow: 0 0 7px 3px ${props => props.theme.colors.blue}80;
         }
         100%{
-            box-shadow: 0 0 0px 0px #5398FF;
+            box-shadow: 0 0 0px 0px ${props => props.theme.colors.blue}80;
         }
     }
 `;

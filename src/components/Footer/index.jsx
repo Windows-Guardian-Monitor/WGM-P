@@ -1,7 +1,18 @@
 import {Link} from "react-router-dom";
-import {ContainerContent, ConteinerFooter, ContentFooter} from "./style";
+import {
+	ContainerContent,
+	ConteinerFooter,
+	ContentFooter,
+	Logo,
+	LogoContent
+} from "./style";
+import { useTheme } from "styled-components";
+import logoImageDark from "../../images/logoPlusDark.png";
 
 export default function Footer() {
+	const theme = useTheme();
+	const isDarkMode = theme.title === "dark";
+
 	return (
 		<ConteinerFooter>
 			<ContentFooter>
@@ -30,6 +41,10 @@ export default function Footer() {
 					<Link to="/Download">Download</Link>
 				</ContainerContent>
 			</ContentFooter>
+			<LogoContent>
+				<Logo src={logoImageDark} />
+				<p>&copy; 2024 Nome da Empresa. Todos os direitos reservados.</p>
+			</LogoContent>
 		</ConteinerFooter>
 	);
 }

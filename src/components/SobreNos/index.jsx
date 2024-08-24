@@ -1,7 +1,13 @@
+import SecoundContent from "./SecoundContent";
+import StartContent from "./StartContent";
+import ThirdContent from "./ThirdContent";
+
 export default function SobreNos() {
 	return (
-		<div>
-			sobre nos Windows Guardiam Monitor
-		</div>
+		<>
+			<StartContent />
+			<SecoundContent />
+			<ThirdContent />
+		</>
 	);
 }
