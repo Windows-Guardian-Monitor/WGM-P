@@ -27,10 +27,7 @@ export default function NavBar({toggleTheme}) {
 
 	return (
 		<>
-			<HeaderAnimation
-				isDarkMode={isDarkMode}
-				isOpen={isOpen}
-			></HeaderAnimation>
+			<HeaderAnimation isDarkMode={isDarkMode} isOpen={isOpen} />
 			<Header isOpen={isOpen}>
 				<Logo src={isDarkMode ? logoImageDark : logoImage} />
 				<List>
@@ -49,10 +46,15 @@ export default function NavBar({toggleTheme}) {
 							Download
 						</Link>
 					</ContentList>
+					<ContentList>
+						<Link onClick={handleToggle} to="/Termos-de-Uso">
+							Termos de Uso
+						</Link>
+					</ContentList>
 
 					<Switch isDarkMode={isDarkMode} onClick={toggleTheme} />
 				</List>
-				<IconList  onClick={handleToggle} isOpen={isOpen}>
+				<IconList onClick={handleToggle} isOpen={isOpen}>
 					<Line></Line>
 					<Line></Line>
 					<Line></Line>

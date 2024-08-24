@@ -1,7 +1,7 @@
 import styled, { css } from "styled-components";
 
 export const HeaderAnimation = styled.section`
-    @media only screen and (max-width: 1020px){
+    @media only screen and (max-width: 1130px){
         
         position: fixed;
         top: 0;
@@ -48,16 +48,16 @@ export const Header = styled.header`
         }
     }
 
-    @media only screen and (max-width: 1020px){
+    @media only screen and (max-width: 1130px){
         & img {
             ${props =>
         props.isOpen
             ? css`
-                            opacity: 0;
-                        `
+                opacity: 0;
+            `
             : css`
-                            animation: logo 1s;
-                        `}
+                animation: logo 1s;
+            `}
             transition: opacity 0.2s;
 
             @keyframes logo {
@@ -86,7 +86,9 @@ export const Header = styled.header`
             display: block;
         }
         & ul {
-            height: 25%;
+            opacity: ${({ isOpen }) => (isOpen ? "1" : "0")};
+            height: auto;
+
             position: absolute;
 
             flex-direction: column;
@@ -94,14 +96,14 @@ export const Header = styled.header`
             gap: 50px;
 
             margin-top: ${({ isOpen }) => (isOpen ? "0px" : "120px")};
-            transition: margin-top 0.3s;
+            transition: margin-top 0.3s, opacity 0.2s, transform 0.5s;
 
             top: 50%;
             left: 50%;
-            transform: translate(-50%, -50%);
+            transform: ${({ isOpen }) => (isOpen ? "translate(-50%, -50%)" : "translate(-50%, -137%)")} ;
         }
     }
-    @media only screen and (min-width: 1020px){
+    @media only screen and (min-width: 1130px){
         & div {
             display: none;
         }
@@ -217,7 +219,14 @@ export const Line = styled.span`
 `;
 export const List = styled.ul`
     display: flex;
-    gap: 20px;
+    gap: 10px;
+    & span:last-child {
+        margin-left: 20px;
+
+        @media only screen and (max-width: 1130px) {
+            margin: 0;
+        }
+    }
 `;
 export const Logo = styled.img`
     height: 50px;
@@ -230,7 +239,7 @@ export const ContentList = styled.li`
 
     & * {
         cursor: pointer;
-        padding: 25px;
+        padding: 10px 20px;
     }
 
     & *:hover {
@@ -239,7 +248,7 @@ export const ContentList = styled.li`
     }
     & *::after{
         content: "";
-        top: calc(100% + 5px);
+        top: 100%;
         left: 50%;
 
         width: 0%;
