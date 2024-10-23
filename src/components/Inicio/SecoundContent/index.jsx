@@ -6,17 +6,23 @@ export default function SecoundContent() {
 	return (
 		<SecondContent>
 			<TextContent>
-				<h2>Itens q vai ter no programa</h2>
+				<h2>Recursos do Windows Guardian Monitor</h2>
 				<p>
-					Lorem ipsum dolor, sit amet consectetur adipisicing elit.
-					Consequatur corrupti neque praesentium ut dolores deserunt omnis.
-					Corrupti consequuntur, eveniet neque eius in officiis illum
-					consectetur fugit. Facere, minus quod. Quos?
+					O Windows Guardian Monitor oferece uma solução
+					completa para monitorar e gerenciar o consumo de software em
+					sistemas. Com ferramentas que rastreiam a utilização de
+					programas, é possível identificar quais aplicativos estão sendo
+					mais utilizados e em quais horários. Além disso, a funcionalidade
+					de bloqueio permite restringir o acesso a aplicativos
+					indesejados, promovendo um ambiente de trabalho mais produtivo.
+					Essa abordagem ajuda organizações a otimizar recursos, aumentar a
+					segurança e garantir que as diretrizes de uso de software sejam
+					seguidas de maneira eficaz.
 				</p>
 
 				<Link to="/Download">
 					<VejaContent>
-						<span>Veja algo</span>
+						<span>Baixe agora</span>
 						<svg
 							xmlns="http://www.w3.org/2000/svg"
 							height="13px"

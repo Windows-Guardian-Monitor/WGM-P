@@ -9,7 +9,7 @@ import {
 	Text
 } from "./style";
 
-export default function TextContent({titulo, texto, destaque1, destaque2}) {
+export default function TextContent({titulo, texto1, texto2, texto3, destaque1, destaque2}) {
 	const [isWindow, setIsWindow] = useState(false);
 
 	const toggleWindow = () => {
@@ -29,7 +29,9 @@ export default function TextContent({titulo, texto, destaque1, destaque2}) {
 						</div>
 					</Close>
 					<H4Colores>{titulo}</H4Colores>
-					<Text isWindow={isWindow}>{texto}</Text>
+					<Text isWindow={isWindow}>{texto1}</Text>
+					<Text isWindow={isWindow}>{texto2}</Text>
+					<Text isWindow={isWindow}>{texto3}</Text>
 				</div>
 				<Description isWindow={isWindow}>
 					<span>{destaque1 || <p>Destaque1</p>}</span>

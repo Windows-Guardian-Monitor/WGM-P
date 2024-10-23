@@ -3,7 +3,7 @@ import styled, { css } from "styled-components";
 export const ContainerFather = styled.div`
     position: relative;
     width: 300px;
-    height: 250px;
+    height: 213px;
     border-radius: 30px;
     overflow: hidden;
 
@@ -36,10 +36,12 @@ export const ContainerTransparent = styled.div`
             height: 100vh;
             width: 100vw;
 
-            background: ${props=> props.theme.colors.transparent}aa;
+            background: ${props => props.theme.colors.transparent}aa;
         `}
 `;
 export const Container = styled.div`
+    
+
     & > div:first-child {
         display: flex;
         flex-direction: column;
@@ -53,6 +55,7 @@ export const Container = styled.div`
             }
         `}
     }
+    overflow-y: ${props => props.isWindow ? "auto" : "hidden"};
 
     display: flex;
     flex-direction: column;
@@ -103,11 +106,11 @@ export const Close = styled.h4`
 
             border-radius: 50%;
 
-            background: ${props=> props.theme.colors.transparent}10;
+            background: ${props => props.theme.colors.transparent}10;
             transition: background 0.2s;
 
             &:hover {
-                background: ${props=> props.theme.colors.blue}11;
+                background: ${props => props.theme.colors.blue}11;
             }
 
             & div {
@@ -125,11 +128,11 @@ export const Close = styled.h4`
                 position: absolute;
                 height: 2px;
                 width: 20px;
-                background: ${props=> props.theme.colors.secound};
+                background: ${props => props.theme.colors.secound};
                 transition: background 0.2s;
             }
             &:hover span{
-                background: ${props=> props.theme.colors.blue};
+                background: ${props => props.theme.colors.blue};
             }
             & span:first-child{
                 transform: rotate(45deg);
@@ -144,7 +147,7 @@ export const H4Colores = styled.h4`
     font-weight: 1000;
 
     padding-bottom: 15px;
-    border-bottom: 1px solid ${props=> props.theme.colors.transparent};
+    border-bottom: 1px solid ${props => props.theme.colors.transparent};
     background: linear-gradient(45deg, #1171FF, #3B18FF, #593BFF, #0145AA, #1171FF, #3B18FF);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
@@ -188,5 +191,6 @@ export const Description = styled.div`
         css`
             display: flex;
             justify-content: space-around;
+            flex-wrap: wrap;
         `}
 `

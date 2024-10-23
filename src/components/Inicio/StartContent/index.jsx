@@ -30,12 +30,12 @@ export default function StartContent() {
 						</span>
 					</h1>
 					<p>
-						Bem-vindo ao Windows Guardiam Monitor, a solução definitiva
+						Bem-vindo ao Windows Guardian Monitor, a solução definitiva
 						para gerenciar e proteger seu computador. Nosso software foi
 						projetado para oferecer segurança de ponta ao seu sistema
 						Windows, bloqueando aplicativos indesejados e garantindo que
 						apenas usuários autorizados tenham acesso às funcionalidades
-						que você define. Com Windows Guardiam Monitor, você tem o
+						que você define. Com Windows Guardian Monitor, você tem o
 						controle total sobre o que pode ser executado em seu PC.
 					</p>
 					<Link to="/Download">

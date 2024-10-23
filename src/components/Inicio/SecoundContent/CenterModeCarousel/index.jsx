@@ -32,31 +32,35 @@ export default function CenterModeCarousel() {
 				<Slider {...settings} swipeToSlide={true} style={{gap: "0"}}>
 					<IconCarrossel href="">
 						<img src={icone1} />
-						<span>Analise</span>
+						<span>Análise</span>
 					</IconCarrossel>
 					<IconCarrossel href="">
 						<img src={icone1} />
-						<span>Analise</span>
+						<span>Criação de Regras</span>
 					</IconCarrossel>
 					<IconCarrossel href="">
 						<img src={icone1} />
-						<span>Analise</span>
+						<span>Relatórios</span>
 					</IconCarrossel>
 					<IconCarrossel href="">
 						<img src={icone1} />
-						<span>Analise</span>
+						<span>Gráficos</span>
 					</IconCarrossel>
 					<IconCarrossel href="">
 						<img src={icone1} />
-						<span>Analise</span>
+						<span>Bloqueios de Aplicações</span>
 					</IconCarrossel>
 					<IconCarrossel href="">
 						<img src={icone1} />
-						<span>Analise</span>
+						<span>Monitoramento</span>
 					</IconCarrossel>
 					<IconCarrossel href="">
 						<img src={icone1} />
-						<span>Analise</span>
+						<span>Feedback e Melhoria Contínua</span>
+					</IconCarrossel>
+					<IconCarrossel href="">
+						<img src={icone1} />
+						<span>Alertas</span>
 					</IconCarrossel>
 				</Slider>
 			</div>

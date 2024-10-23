@@ -10,6 +10,7 @@ export const IconCarrossel = styled.div`
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    gap: 20px;
 
     transform-origin: bottom center;
 
@@ -31,5 +32,6 @@ export const IconCarrossel = styled.div`
     }
     & span{ 
         user-select: none;
+        text-align: center;
     }
 `;

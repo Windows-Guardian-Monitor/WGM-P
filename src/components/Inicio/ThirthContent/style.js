@@ -11,6 +11,7 @@ export const Content = styled.section`
     padding-top: 110px;
 
     text-align: center;
+    
 
     @media only screen and (max-width: 1200px){
         padding: 50px 10%;
@@ -35,5 +36,7 @@ export const ArticleText = styled.article`
     gap: 30px;
 
     width: 100%;
+
+
 `;
 
