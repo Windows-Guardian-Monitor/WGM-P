@@ -41,7 +41,7 @@ export const DownloadP = styled.section`
     a {
         border: 1px ${props => props.theme.colors.blue} solid;
         border-radius: 10px;
-        width: 500px;
+        width: 400px;
         height: 250px;
         
         display: flex;

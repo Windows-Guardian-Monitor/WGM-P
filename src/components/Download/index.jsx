@@ -33,7 +33,7 @@ export default function Download() {
 							<li>- v1.0</li>
 						</ul>
 					</div>
-					<span>Oferecendo uma versão unica e completa</span>
+					<span>Baixe agora</span>
 				</a>
 			</DownloadP>
 		</Container>
