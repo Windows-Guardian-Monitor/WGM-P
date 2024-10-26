@@ -29,7 +29,7 @@ export default function CenterModeCarousel() {
 	return (
 		<Carrossel>
 			<div className="slider-container">
-				<Slider {...settings} swipeToSlide={true} style={{gap: "0"}}>
+				<Slider {...settings} swipeToSlide={true} style={{}}>
 					<IconCarrossel href="">
 						<img src={icone1} />
 						<span>Análise</span>

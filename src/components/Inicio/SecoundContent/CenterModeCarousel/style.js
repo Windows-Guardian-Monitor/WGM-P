@@ -3,6 +3,13 @@ import styled from "styled-components";
 export const Carrossel = styled.section`
     width: 100%;
     margin: 0 auto;
+    & > div > div > div > div {
+        display: flex;
+    }
+    & > div > div > div > div > div {
+        margin: 0 15px;
+    }
+    
 `;
 
 export const IconCarrossel = styled.div`
