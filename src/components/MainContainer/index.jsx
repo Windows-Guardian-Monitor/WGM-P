@@ -3,7 +3,7 @@ import Inicio from "../Inicio";
 import SobreNos from "../SobreNos";
 import Download from "../Download";
 import {Main} from "./style";
-import TermosUso from "../Termos/Termos-de-Uso";
+import TermosUso from "../Termos";
 
 export default function MainContainer() {
 	return (
