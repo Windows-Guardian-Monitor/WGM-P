@@ -30,9 +30,6 @@ export default function Footer() {
 					>
 						Desenvolvedores
 					</a>
-					<a href="mailto:msthaiiscomercial@gmail.com">
-						msthaiiscomercial@gmail.com
-					</a>
 				</ContainerContent>
 				<ContainerContent>
 					<h1>Páginas</h1>
