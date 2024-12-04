@@ -22,7 +22,7 @@ export default function Footer() {
 						target="_blank"
 						href="https://github.com/orgs/Windows-Guardian-Monitor/repositories"
 					>
-						Repositório Git
+						Repositório Github
 					</a>
 					<a
 						target="_blank"
