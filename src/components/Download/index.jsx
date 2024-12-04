@@ -22,7 +22,7 @@ export default function Download() {
 				<p>Proteja seu sistema agora com o Windows Guardian Monitor, clique para baixar.</p>
 			</div>
 			<DownloadP>
-				<a target="_blank" href="https://www.google.com">
+				<a target="_blank" href="https://github.com/Windows-Guardian-Monitor/EndpointProtector">
 					<div>
 						<img src={wgmw} />
 						<ul>
